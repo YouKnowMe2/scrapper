@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= url %></title>
+</head>
+
+<body>
+
+
+
+<form action="/abc" method="post">
+
+    <input type="text" placeholder="Enter The Keyword" name="urlName" />
+    <!-- <input type="text" placeholder="Provide Tag Name" name="tagName" /> -->
+
+    <button type="submit">submit</button>
+
+</form>
+<h1>Keyword Searched For: <%=(url)%> </h1>
+<div>
+
+
+    <ol style="list-style: none">
+        <% if(gData.length>0){%>
+
+          <li><%- gData.join('') %> </li>
+        <%}%>
+
+    </ol>
+
+
+</div>
+<p><%=(warning)%> </p>
+
+
+</body>
+
+</html>
